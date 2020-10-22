@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: PointContext
+  name: pointcontext
   labels:
-    app: PointContext
+    app: pointcontext
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: PointContext
+      app: pointcontext
   template:
     metadata:
       labels:
-        app: PointContext
+        app: pointcontext
     spec:
       containers:
-        - name: PointContext
-          image: username/PointContext:latest
+        - name: pointcontext
+          image: username/pointcontext:latest
           ports:
             - containerPort: 8080
           readinessProbe:
